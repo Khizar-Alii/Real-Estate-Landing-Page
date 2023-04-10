@@ -1,0 +1,19 @@
+@media screen and (max-width: 1000px) {
+    .LiveInOdesa {
+      flex-direction: column;
+      align-items: center;
+    }
+    .section-left,
+    .section-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      padding: 0 20px;
+    }
+  
+    .section-right .LiveInOdesa-img {
+      width: 80%;
+    }
+  }

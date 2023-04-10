@@ -1,0 +1,135 @@
+.LiveInOdesa-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 30px;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+
+.LiveInOdesa-section-left {
+  width: 50%;
+}
+.LiveInOdesa-section-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.LiveInOdesa-img{
+    width: 100%;
+    height: 650px;
+    opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.LiveInOdesa-top{
+    text-align: center;
+    font-size: 19px;
+    color: #171717;
+}
+
+.LiveInOdesa-title {
+  font-size: 34px;
+  color: #171717;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 11px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+.LiveInOdesa-title-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+.LiveInOdesa-text {
+  padding: 0 40px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 25px;
+  font-weight: 200;
+  font-family: 'Cormorant'
+}
+
+@media screen and (max-width: 1000px) {
+  .LiveInOdesa-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .section-left,
+  .section-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .section-right .LiveInOdesa-img {
+    width: 80%;
+  }
+}
+
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.LiveInOdesa-img-visible {
+  opacity: 1;
+  animation: slideUp 0.5s ease; 
+}
+
+
+@media screen and (max-width: 1000px) {
+  .LiveInOdesa-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+  }
+
+  .LiveInOdesa-section-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .LiveInOdesa-section-right {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .LiveInOdesa-img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .LiveInOdesa-top {
+    font-size: 16px;
+  }
+
+  .LiveInOdesa-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .LiveInOdesa-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+

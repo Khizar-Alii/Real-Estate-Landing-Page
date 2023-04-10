@@ -1,0 +1,115 @@
+body{
+  overflow-x: hidden;
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 30px;
+  flex-direction: row;
+  margin-top: 5rem;
+}
+
+
+.video-section-left {
+  width: 50%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-section-right {
+  width: 50%;
+}
+
+.video-title  {
+  font-size: 50px;
+  color: #171717;
+  font-weight: 100;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+.video-title-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.video-text{
+  padding: 0 30px;
+  font-size: 16px;
+}
+
+.video {
+  width: 90%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+@media screen and (max-width: 1000px) {
+  .video-container{
+    flex-direction: column-reverse;
+  }
+
+  .video-section-left,
+  .video-section-right {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video {
+    width: 80%;
+  }
+}
+
+.main-button {
+  display: block;
+  margin: 40px auto;
+  padding: 20px 50px;
+  background-color: transparent;
+  color: #171717;
+  font-family: "Cormorant", serif;
+  letter-spacing: 0.1em;
+  line-height: 12px;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  transition-duration: 1s;
+}
+
+.button-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-button:hover {
+  border-color: #fff;
+  color: #fff;
+  background-color: rgba(21, 57, 58, 0.9);
+}
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  .video-visible {
+    opacity: 1;
+    animation: slideUp 0.5s ease;
+  }

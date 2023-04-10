@@ -1,0 +1,55 @@
+.roomscontainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.section-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.headings h2 {
+  width: 100%;
+  text-align: center;
+  color: #a5a5a5;
+  font-size: 25px;
+  font-family: "Cormorant", serif;
+  padding: 11px 0px;
+  cursor: pointer;
+  margin: 20px 0px;
+}
+
+.headings h2.selected-room {
+  color: #171717;
+}
+
+.section-right {
+  width: 50%;
+  height: 100%;
+}
+
+.img {
+  width: 90%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.img-visible {
+  opacity: 1;
+  animation: slideUp 0.5s ease; 
+}
+

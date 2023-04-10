@@ -1,0 +1,43 @@
+.carousel-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  padding: 0 10px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover; 
+}
+
+.custom-dot {
+  width: 100px;
+  height: 2px;
+  background-color: #fff;
+  margin: 10px 5px;
+  position: relative;
+}
+
+.custom-dot::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.custom-dot.slick-active::after {
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  .carousel-image {
+    height: 50vh; /* decrease height for smaller screens */
+  }
+}

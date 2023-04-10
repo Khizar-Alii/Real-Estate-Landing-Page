@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "Averta CY";
+  src: url("../fonts/Averta-CY-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.footer-section-left {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.footer-spacer {
+  width: 100%;
+}
+
+.footer-social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accounts-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.accounts-link a {
+  color: #171717;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  position: relative;
+  font-size: 16px;
+  font-family: "Averta CY", sans-serif;
+  font-weight: 600;
+}
+
+.accounts-link a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.accounts-link a:hover::before {
+  width: 100%;
+}
+
+.footer copyright {
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.footer-section-middle {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.salesDepartment-phone-number {
+  display: flex;
+  flex-direction: column;
+  color: #a5a5a5;
+}
+.salesDepartment-list {
+  list-style: none;
+  margin-bottom: 4rem;
+}
+.salesDepartment {
+  margin: 0px 0 20px;
+}
+.phoneNumber {
+  color: #171717;
+  position: relative;
+  font-size: 16px;
+  font-family: "Averta CY", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.phoneNumber::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.phoneNumber:hover::before {
+  width: 44%;
+}
+.address-content {
+  display: flex;
+  flex-direction: column;
+}
+.address-title {
+  color: #a5a5a5;
+  margin-top: 5px;
+}
+.address-location {
+  display: inline-block;
+  font-family: "Averta CY", sans-serif;
+  color: #171717;
+  margin: 1rem 0;
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.address-location::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.address-location:hover::before {
+  width: 100%;
+}
+
+.footer-section-right {
+  width: 40%;
+  padding: 0 2rem;
+}
+.section-right-heading {
+  margin-bottom: 2rem;
+}
+
+.section-right-heading h1 {
+  font-size: 40px;
+  color: #171717;
+  margin-bottom: 1rem;
+}
+.section-right-input-container {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.input-section-right {
+  width: 100%;
+  /* margin-bottom: 2rem; */
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #171717;
+  outline: none;
+  border: none;
+  font-family: "Averta CY", sans-serif;
+}
+.input-section-right::placeholder {
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: "Averta CY", sans-serif;
+}
+.input-section-right::-webkit-outer-spin-button,
+.input-section-right::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  display: none;
+}
+.send-number {
+  background-color: transparent;
+  border: none;
+  color: #171717;
+  font-family: "Averta CY", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+.hand-craft {
+  font-size: 0.8rem;
+  color: #ccc;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer-section-left,
+  .footer-section-middle,
+  .footer-section-right {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .footer-section-middle {
+    text-align: center;
+    order: 2; /* Change the order of the middle section to appear after the first section */
+  }
+  .footer-section-right {
+    order: 3; /* Change the order of the right section to appear last */
+  }
+  .salesDepartment-phone-number {
+    margin-bottom: 2rem;
+  }
+  .addresses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .address-content {
+    margin-top: 1.5rem;
+  }
+}
