@@ -17,10 +17,14 @@
   align-items: center;
   justify-content: center;
 }
-.footer-logo h3 {
+/* .footer-logo h3 {
   font-size: 1.5rem;
   margin: 10px 0;
+} */
+.footer-logo img{
+ height: 200px;
 }
+
 
 .footer-spacer {
   width: 100%;

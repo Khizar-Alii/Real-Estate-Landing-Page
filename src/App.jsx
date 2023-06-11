@@ -8,7 +8,10 @@ import Rooms from "./My Components/Rooms";
 import LiveInOdesa from "./My Components/liveInOdesa";
 import Frenchchic from "./My Components/Frenchchic";
 import Footer from "./My Components/Footer";
-import Navbartwo from "./My Components/Navbartwo";
+import Heading from "./My Components/Heading";
+import LeaveARequest from "./My Components/LeaveARequest";
+import { Routes, Route } from "react-router-dom";
+import PropertyPrices from "./My Components/PropertyPrices";
 const images = [
   {
     url: "https://trabotti.com.ua/_next/image?url=https%3A%2F%2Ftrabotti.com.ua%2Fupload%2F7%2Fcompression%2F1626447137645-Ptichka%201.jpg&w=1920&q=75",
@@ -110,7 +113,13 @@ const rooms = [
     alt: "5",
   },
 ];
-
+const propertyData = [
+  { property: 'Property A', price: 500000 },
+  { property: 'Property B', price: 700000 },
+  { property: 'Property C', price: 600000 },
+  { property: 'Property D', price: 900000 },
+  { property: 'Property E', price: 800000 },
+];
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -137,13 +146,30 @@ function App() {
           <Header />
           {/* <Navbartwo/> */}
           <div className="content-wrappper">
-            <Images images={images} />
-            <VideoSection />
-            <Gallery galleryImages={galleryImages} />
-            <Rooms rooms={rooms} />
-            <LiveInOdesa />
-            <Frenchchic />
-            <Footer />
+            <Routes>
+              <Route
+                path="/Real-Estate-Landing-Page"
+                element={
+                  <>
+                    <Heading />
+                    <Images images={images} />
+                    <VideoSection />
+                    <Gallery galleryImages={galleryImages} />
+                    <Rooms rooms={rooms} />
+                    <LiveInOdesa />
+                    <Frenchchic />
+                    
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/Real-Estate-Landing-Page/leavearequest"
+                element={<LeaveARequest />}
+              />
+              <Route path="/Real-Estate-Landing-Page/prices" element={<PropertyPrices data={propertyData}/>} />
+              
+            </Routes>
           </div>
         </div>
       )}

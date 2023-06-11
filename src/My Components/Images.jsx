@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./Images.css";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const Images = ({ images }) => {
   const [buttonRef, buttonInView] = useInView({
@@ -30,12 +31,14 @@ const Images = ({ images }) => {
           </div>
         ))}
       </Slider>
+      <Link to='/Real-Estate-Landing-Page/leavearequest' className="linktoform">
       <button
         ref={buttonRef}
         className={`main-button ${buttonInView ? "button-visible" : ""}`}
       >
         Leave A Request
       </button>
+      </Link>
     </>
   );
 };

@@ -2,27 +2,28 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import "./VideoSection.css";
 import video from "../My Components/video.mp4";
+import { Link } from "react-router-dom";
 
 const VideoSection = () => {
-    const [inViewRef, inView] = useInView({
-      triggerOnce: true,
-      threshold: 0.1 // Adjust threshold value as needed
-    });
-    const [buttonRef, buttonInView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1 // Adjust threshold value as needed
-      });
-      const [videoRef, videoInView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1 // Adjust threshold value as needed
-      });
+  const [inViewRef, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1, // Adjust threshold value as needed
+  });
+  const [buttonRef, buttonInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1, // Adjust threshold value as needed
+  });
+  const [videoRef, videoInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1, // Adjust threshold value as needed
+  });
 
   return (
     <div>
       <section>
         <div className="video-container">
           <div className="video-section-left">
-          <h1
+            <h1
               ref={inViewRef}
               className={`video-title ${inView ? "video-title-visible" : ""}`}
             >
@@ -35,15 +36,22 @@ const VideoSection = () => {
               center - but away from its hustle and bustle. The focus of all
               urban entertainment - but with the maximum level of privacy.
             </div>
-            <button
-              ref={buttonRef}
-              className={`main-button ${buttonInView ? "button-visible" : ""}`}
+            <Link
+              to="/Real-Estate-Landing-Page/leavearequest"
+              className="linktoform"
             >
-              Leave A Request
-            </button>
+              <button
+                ref={buttonRef}
+                className={`main-button ${
+                  buttonInView ? "button-visible" : ""
+                }`}
+              >
+                Leave A Request
+              </button>
+            </Link>
           </div>
           <div className="video-section-right">
-          <video
+            <video
               ref={videoRef}
               className={`video ${videoInView ? "video-visible" : ""}`}
               src={video}

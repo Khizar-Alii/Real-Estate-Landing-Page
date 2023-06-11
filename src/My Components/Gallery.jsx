@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Gallery.css"; 
 import { useInView } from 'react-intersection-observer';
+import { Link } from "react-router-dom";
 
 const Gallery = ({ galleryImages }) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -56,6 +57,7 @@ const Gallery = ({ galleryImages }) => {
       <div className="arrow-container right" onClick={handleNext}>
         &gt;
       </div>
+      <Link to='/Real-Estate-Landing-Page/prices' className="linktoform">
       <Slider ref={sliderRef} {...settings}>
         {galleryImages.map((image, index) => (
           <div key={index}>
@@ -69,6 +71,7 @@ const Gallery = ({ galleryImages }) => {
           </div>
         ))}
       </Slider>
+      </Link>
     </div>
   );
 };

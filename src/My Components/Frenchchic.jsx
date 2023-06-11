@@ -1,6 +1,7 @@
 import React from "react";
 import "./Frenchchic.css";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 function Frenchchic() {
   const [inViewheadRef, inViewhead] = useInView({
@@ -39,12 +40,19 @@ function Frenchchic() {
                 which Doma Trabotti is built.
               </p>
             </div>
-            <button
-              ref={buttonRef}
-              className={`main-button ${buttonInView ? "button-visible" : ""}`}
+            <Link
+              to="/Real-Estate-Landing-Page/leavearequest"
+              className="linktoform"
             >
-              Leave A Request
-            </button>
+              <button
+                ref={buttonRef}
+                className={`main-button ${
+                  buttonInView ? "button-visible" : ""
+                }`}
+              >
+                Leave A Request
+              </button>
+            </Link>
           </div>
           <div className="LiveInOdesa-section-right">
             <img

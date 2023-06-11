@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className='header'>
         <Navbar/>
-        <Heading/>
+        {/* <Heading/> */}
     </div>
   )
 }

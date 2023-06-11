@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import addlogo from './addlogo.png'
+import Logo from "./Logo.jpg";
+
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
       <section className="footer-section-left">
         <div className="footer-logo">
           {/* <h3>Investors Avenue</h3> */}
-          <img src={addlogo } alt="Investors Avenue" />
+          <img src={Logo } alt="Investors Avenue" />
         </div>
         <div className="footer-spacer" style={{ height: "2rem" }}></div>
         <div className="footer-social-link">

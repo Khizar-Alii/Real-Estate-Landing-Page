@@ -36,6 +36,10 @@
 .custom-dot.slick-active::after {
   opacity: 0;
 }
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
 @media (max-width: 768px) {
   .carousel-image {
     height: 50vh; /* decrease height for smaller screens */
