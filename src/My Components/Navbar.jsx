@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CallEndIcon from "@mui/icons-material/CallEnd";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import "./Navbar.css";
-import Logo from "./Logo.jpg";
+import Logo from "./Logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 
